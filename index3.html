@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>2 weeks</title>
+        <link rel="stylesheet" href="styles3.css">
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="middle">
+        <button class="btn btn1">quờ nhaaa</button>
+        </div>
+        <div class="left">
+            <button class="btn btn2">PI</button>
+        </div>
+        <div class = "right">
+            <button class="btn btn3">ĐAY</button>
+            </div>
+            <div class="top">
+                  <button class="btn btn4">HÁP</button>
+              </div>
+              <div class="bottom">
+                  <button class="btn btn5">BỚT</button>
+              </div>
+        
+        <section>
+            <h2></h2>
+        </section>
+        <script>
+            function stars(){
+                
+                const count = 200;
+                const section=document.querySelector('section');
+                var i = 0 ;
+                while (i < count){
+                    const star = document.createElement('i');
+                    const x = Math.floor(Math.random() * window.innerWidth);
+                    const y = Math.floor(Math.random() * window.innerHeight);
+                    const size = Math.random() * 4;
+                    const duration = Math.random() * 2;
+                    star.style.animationDuration = 2+duration+'s';
+                    star.style.animationDelay = duration+'s';
+                    star.style.left = x+'px';
+                    star.style.top = y+'px';
+                    star.style.width = 1+size + 'px';
+                    star.style.height = 1+size + 'px';
+                    section.appendChild(star);
+                    i++;
+                }
+            }
+            stars();
+        </script>
+        </body>
+        </html>
